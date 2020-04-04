@@ -17,8 +17,12 @@
 <div>
 <div class="container">
 <h1  >Hi, I am Rodolfo</p>
-<h3 >I am interested in the relationship between chaos and order in our universe, but mainly in music, human behavior and biology. I hope to make useful contributions to those fields by helping uncover the patterns beneath them</p>
-<h3  >This site, for example, is a little experiment. As you may have noticed, the color changes depending on the position of the cursor. Try to move it around to find a color you like. You might notice that your options are limited. The amount of blue in your screen's color was defined at random when you loaded the page. The red and green are defined by your cursor's movement. So you have control over the outcome, but your options are limited by a constant, which was defineded completely randomly. In many phenomena in the world, the same principle holds. Agents make decisions and have some agency over them. However, their possibilities space is always finite and constrained. Telling apart the determinate from the random is key to understand the world.  </p>
+<h3 id = 'intro'>I am interested in the relationship between chaos and order in our universe, but mainly in music, human behavior and biology. I hope to make useful contributions to those fields by helping uncover the patterns beneath them. </br>
+This site, for example, is a little experiment. As you may have noticed, the color changes depending on the position of the cursor. Try to move it around to find a color you like. You might notice that your options are limited. The amount of blue in your screen's color was defined at random when you loaded the page. The red and green are defined by your cursor's movement. So you have control over the outcome, but your options are limited by a constant, which was defineded completely randomly. In many phenomena in the world, the same principle holds. Agents make decisions and have some agency over them. However, their possibilities space is always finite and constrained. Telling apart the determinate from the random is key to understand the world.  </h3>
+
+
+
+<button type="button" onclick="chaos()" class="btn btn-primary">Press for chaos</button>
 
 <h2>Projects</h2>
 <p>Project 1<p>
@@ -37,6 +41,30 @@
 base = Math.floor((Math.random() *150) + 105);
 base1 = Math.floor((Math.random() *150) + 105);
 document_width =  $(document).width();
+
+function getRandomInt(n) {
+  return Math.floor(Math.random() * n);
+}
+function chaos() {
+  var s = $('#intro').text()
+  var arr = s.split('');           // Convert String to array
+  var n = arr.length;              // Length of the array
+  
+  for(var i=0 ; i<n-1 ; ++i) {
+    var j = getRandomInt(n);       // Get random of [0, n-1]
+    
+    var temp = arr[i];             // Swap arr[i] and arr[j]
+    arr[i] = arr[j];
+    arr[j] = temp;
+  }
+  
+  s = arr.join('');  
+  $('#intro').text(s)             // Convert Array to string
+  return s;                        // Return shuffled string
+}
+
+
+
 function myFunction(e, base) {
   var x = e.clientX;
   var y = e.clientY;
@@ -49,8 +77,6 @@ function myFunction(e, base) {
   $("body").css("background-color", rgbvalue);
   text = scaledX + ',' + scaledY;
   height = $(document).width();
-  
-  
   
 }
 

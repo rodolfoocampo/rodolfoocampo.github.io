@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
+  <title>Rodolfo Ocampo</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="icon" href="./Images/yo.jpg">
 </head>
 
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400&display=swap" rel="stylesheet">
@@ -47,10 +48,10 @@ h2 {
 
   
 
-  If you tap the screen or over move your mouse around, you will notice that the color changes accordingly. Try to find the color you like the most. 
+  If you tap the screen or over move your mouse around, you will see that the color changes accordingly. Try to find your favorite. 
   </br>
   </br> 
-  <strong>You will start to notice patterns, </strong> but you will also notice that your options are limited. One of the three components that determine a color was set randomly and remains fixed. You can manipulate the other two components with the <strong>X</strong> and <strong>Y</strong> coordinates of your screen tap or cursor. 
+  <strong>You will start to notice patterns, </strong> but you will also notice that your options are limited. One of the three components that determine a color was set randomly and remains fixed. The other two can be manipulated with the <strong>X</strong> and <strong>Y</strong> coordinates of your screen tap or cursor. 
 
   </br>
   </br>
@@ -61,7 +62,7 @@ h2 {
   </br>
 
 
-<button type="button" onclick="dice()" class="btn btn-primary">Press to roll the dice, if you want</button>
+<button type="button" onclick="dice()" class="btn btn-primary">Roll the dice</button>
 </br>
 <p>
 </br>
@@ -70,31 +71,38 @@ h2 {
 </div>
 </br></br>
 <div class="container" style='border-style: solid';>
-<h2>Hello from down under</h2>
+<h2>Hello from down under at the 3A Institute</h2>
 <p>
-  At the moment, I am studying a masters degree at The Autonomy, Agency and Assurance Innovation Institute at the Australian National University, where we are aiming to build a new branch of engineering inpired by Norbert Wiener's Cybernetics and guide the development of cyber-physical systems towards desirable human and environmental outcomes. 
+  At the moment, I am studying a masters degree at The Autonomy, Agency and Assurance Institute at the Australian National University, where we are building a new branch of engineering inpired by Norbert Wiener's Cybernetics and guide the development of cyber-physical systems towards desirable human and environmental outcomes. 
 </p>
 </br></br>
 
 
+<div class="container" style='border-style: solid';>
 <h2>Current Projects</h2>
 <h3>Algorithmic music composer</h3>
 
 <p>For my first semester's final project I am working on developing a system capable of producing human enjoyable music. I have started playing with randomness and agency in the following Jupyter notebook using the Python language. At this stage, I have only created two different components algorithms, one semirandom and one that includes some music theory heuristics. So far, the second ones are perceived more enjoyable by the author. I have also started to create a drumbeat composer that uses frequency ratios between each percussion, instead of a sequence generator.</p>
 
  <ul>
-  <li><h4><a href="https://github.com/rodolfoocampo/la_zona">Access the notebook here</a><h4></li>
+  <li><h4><a href="https://github.com/rodolfoocampo/la_zona/blob/master/Hearing%2C%20feeling%20and%20computing.ipynb">Access the notebook here</a></h4></li>
 </ul>
-</br></br>
-
+</br>
+<h3>COVID-19 scholarly articles analysis</h3>
+<p>I am working on gaining insights from these articles in order to understand COVID-19 better, as a part of challenge launched in Kaggle and as a part of the data and sensors fortnight at the institute.</p>
+</br>
 <h2>Past projects</h2>
+
+
 <h3>Augmented Reality app to expose the resources used in building a robotic dog</h3>
-<p>Augmented Reality app to expose the resources used in building a robotic dog</p>
+<p>As a part of our projects during the 'Taking things apart' fornight, my team and I built a simple app that looked at an image of the dog and overlaid AR elements. </p>
+</br>
+<img src='./Images/aibo.jpeg' width="50%" height="50%"></img>
 
 <h3>Human + AI writing collaboration</h3>
 <p>For the portfolio piece required as a part of my application to the 3A Institue, I decided to write an essay in collaboration with the GPT-2 model. </p>
  <ul>
-  <li><h4>The essay can be found <a href="./PDFs/Ocampo_Rodolfo_Portfolio.pdf">here</a> and the code used to create it can be found in <a href="https://colab.research.google.com/drive/1o_zXG71GOsCFnhzG5exskaL-NOIMlluQ">this Colab Notebook</a><h4></li>
+  <li><p>The essay can be found <a href="./PDFs/Ocampo_Rodolfo_Portfolio.pdf">here</a> and the code used to create it can be found in <a href="https://colab.research.google.com/drive/1o_zXG71GOsCFnhzG5exskaL-NOIMlluQ">this Colab Notebook</a></p></li>
 </ul>
 </div>
 </br></br>
@@ -103,7 +111,7 @@ h2 {
 <h3>The taco game!</h3>
 
 <p>Press the following button and the word "taco" will be randomly inserted somewhere in the text. If you find one, click it to earn a point. It's hard, but don't desist! The victory high is worth it. </p>
-</br>
+
 <button id = 'taco'type="button" onclick="insertTaco()" class="btn btn-primary">Insert taco</button>
 </br> 
 <p id = 'taco_score'></p>
@@ -114,24 +122,32 @@ h2 {
 <p>
  This game illustrates how our dopamine reward system is closely coupled with to our ability to distinguish signal from noise. Here, my website's text is the noise and the taco is your signal. 
 
-I suspect that such a signal-reward mechanism is closely related to our enjoyment of music.</p>
+I suspect that such a signal-reward mechanism is closely related to our enjoyment of music and that what I am exploring in my Algorithmic music composer project at the 3Ai. Here's the <a href="https://github.com/rodolfoocampo/la_zona/blob/master/Hearing%2C%20feeling%20and%20computing.ipynb">Jupyter notebook </a> I told you earlier about where I will be doing most of my exploration. </p>
 </br> 
 
 <h3>The chaotic taco game!</h3>
 
 <p>
  Same game, but now the website text will be random nonsense blob of characters, except for the word 'taco'. Is finding the taco easier? Is it more rewarding? Well, I don't know. This is experimental, OK?</p>
-</br> 
 
-<button id='chaos'type="button" onclick="chaos()" class="btn btn-primary">Taco Chaos</button> <p display='none'>  
+
+<button id='chaos'type="button" onclick="chaos()" class="btn btn-primary">Unleash Taco Chaos</button> <p display='none'>  
 </div>
 
 </br></br>  
 <div class="container" style='border-style: solid';>
 <h2>Blog: Ecofuturismo</h2>
-<p>Here I will be posting some essays and ideas about technology, ecological collapse, algorithmic creativity and many other topics that I cross my exploration in search for the tools to build better future potential states. </p>
+<p>Here I will be posting some essays and ideas about technology, ecological collapse, algorithmic creativity and many other topics that I cross along my search for the tools to build better future potential states. </p>
 </div>
 </br></br>  
+<div class="container" style='border-style: solid';>
+<h2>Code</h2>
+<p>Check out <a href"https://github.com/rodolfoocampo">my Github!</a> </p>
+</div>
+</br></br>  
+
+</div>
+
 
 </div>
 
@@ -204,12 +220,13 @@ function insertTaco() {
   
   var past_string = selected_p_tag[i].innerHTML;
   var selected_position = getRandomInt(past_string.length)
-  new_string = past_string.insert(selected_position, "<a onclick='add_points()'>taco</a> ");
+  new_string = past_string.insert(selected_position, "<a style='color: black;' onclick='add_points()'>taco</a> ");
   console.log(selected_position)
 
   selected_p_tag[i].innerHTML = new_string;
 
   $('#taco').text('Insert another taco')
+
   
 }
 

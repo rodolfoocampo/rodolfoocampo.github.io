@@ -8,16 +8,22 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400&display=swap" rel="stylesheet">
 
 <style>
   
   html *
 {
    
-   color: #ffff !important;
+   color: #000 !important;
    font-family: 'Roboto Mono', monospace !important;
 }
+
+button {
+  color: white !important;
+}
+
 </style>
 <body>
 
@@ -26,7 +32,7 @@
 <body  onmousemove="myFunction(event, base)">
 
 <div>
-<button type="button" onclick="chaos()" class="btn btn-primary">Press for chaos</button>
+
 <div class="container" style='border-style: solid';>
 </br>
 <h1  >Hi, I'm Rodolfo</h1>
@@ -46,12 +52,16 @@
   <strong>But wait! </strong> You can roll the dice again to change your fixed variable for a new random number. If you want to find your favorite color, when will you decide to reroll vs. stay with your options? How do you navigate between randomness and agency? 
 
   </br>
+  </p>
   </br>
+
+
 <button type="button" onclick="dice()" class="btn btn-primary">Press to roll the dice, if you want</button>
 </br>
+<p>
 </br>
 <strong> Living things face these situations all the time but with many more factors that form complicated feedback loops. </strong> Surviving, making music, designing technology and organizing societies are full of them. I am intersted in understanding these systems in order to tell randomness from agency apart and find the the control dynamics. With this, I hope to make useful contributions to the fields of artistic creation, biology and the development of autonomous systems.</p>
-
+</p>
 
 <h2>Hello from down under</h2>
 <p>
@@ -65,16 +75,30 @@
 <h1>Projects</h1>
 <h3>Algorithmic music composer</h3>
 
-<p>For my first semester final project I am working on developing a system capable of producing human enjoyable music. I am aiming to answer some of the following questions:<p>
+<p>For my first semester final project I am working on developing a system capable of producing human enjoyable music. I have started playing with rand  
 
-  What makes a musical piece enjoyable?
+<p>I have started playing with randomness and agency in the following Jupyter notebook using the Python language. At this stage, I have only created two different components algorithms, one semirandom and one that includes some music theory heuristics. So far, the second ones are perceived more enjoyable by the author. I have also started to create a drumbeat composer that uses frequency ratios between each percussion, instead of a sequence generator.</p>
+
+ <ul>
+  <li><h4><a href="https://github.com/rodolfoocampo/la_zona">Access the notebook here</a><h4></li>
+</ul>
+  
+  
+  
+  
+  
+  
+
+
 
 
 <h2>Writing</h2>
-<p>Essay 1<p>
-<p>Essay 2<p>
+<p>Essay 1</p>
+<p>Essay 2</p>
 
+<button id='chaos'type="button" onclick="chaos()" class="btn btn-primary">Press for chaos</button> <p display='none'>  
 </div>
+
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -104,13 +128,15 @@ function chaos() {
   }
   
   s = arr.join('');  
-  $('#intro').text(s)             // Convert Array to string
+  $('p').text(s);
+
+  $('#chaos').text('Keep pressing. Jorge Luis Borges believes you can eventually reach the original text')           // Convert Array to string
   return s;                        // Return shuffled string
 }
 
-base = Math.floor((Math.random() *100) + 70);
+base = Math.floor((Math.random() *100) + 150);
 function dice() {
-  base = Math.floor((Math.random() *100) + 70);
+  base = Math.floor((Math.random() *100) + 150);
   $("body").css("background-color", 'rgb(' + scaledX + ',' + scaledY + ',' + base + ')')
   return base;
 }
@@ -120,8 +146,8 @@ function dice() {
 function myFunction(e, base) {
   var x = e.clientX;
   var y = e.clientY;
-  scaledX = Math.floor((x/document_width)*100) + 70
-  scaledY = Math.floor((y/document_width)*100) + 70
+  scaledX = Math.floor((x/document_width)*100) + 150
+  scaledY = Math.floor((y/document_width)*100) + 150
   combined = scaledX + scaledY%80
   
 

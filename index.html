@@ -56,11 +56,15 @@ h2 {
   <h3> Hi, I'm Rodolfo </h3>
     
     </marquee>
-     
+      
+    
+      
+      
+    </div>
     
   </marquee>
 </marquee>
-</br>
+
 
 </br>
 <div class="container" style='border-style: solid';>
@@ -89,6 +93,16 @@ h2 {
 </br>
 <strong> Living things face these situations all the time but with many more factors that form complicated feedback loops. </strong> Surviving, making music, designing technology and organizing societies are full of them. I am intersted in understanding these systems in order to tell randomness from agency apart and find the the control dynamics. With this, I hope to make useful contributions to the fields of artistic creation, biology and the development of autonomous systems.</p>
 </p>
+</div>
+</br>
+<div class="container" style='border-style: solid';>
+  </br>
+  <button class="btn btn-primary" onclick="start()">Start music</button> Endless stream of a 100% real-time computer-generated retro-futuristic music. It's all generated here, in your browser, uniquely for you, using a neural network called variational autoencoder.
+<div class="slidecontainer">
+  <p id='bpm_label'> <p id='tempo'> Adjust BPMs</p> </p>
+  <input type="range" onchange="setTempo(document.getElementById('bpm_range').value)" min="60" max="140" value="100" class="slider" id="bpm_range">
+</div>
+</br>
 </div>
 </br></br>
 <div class="container" style='border-style: solid';>
@@ -191,6 +205,7 @@ illusory replication? I prefer to dream that burnished surfaces are a figuration
 fruits that bear the name "bulbs." There are two of these bulbs in each hexagon, set crosswise. The light they give is insufficient, and unceasing. </marquee>
 
 </div>
+    
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script>
@@ -295,7 +310,57 @@ String.prototype.insert = function(index, string) {
 };
 
 //Example of use:
+// Instantiate the model by specifying the desired checkpoint.
+const model = new mm.MusicVAE(
+  'https://storage.googleapis.com/magentadata/js/checkpoints/music_vae/trio_4bar');
 
+const player = new mm.Player();
+
+let stopSignal = false;
+let count = 0;
+let tempo = 80;
+
+const sampleAndPlayForever = () => {
+  player.stop();
+  count += 1;
+  
+  return model.sample(1)
+    .then((samples) => player.start(samples[0], tempo))
+    .then(stopSignal ? undefined : sampleAndPlayForever)
+};
+
+const changeTempo = (delta) => {
+  tempo = Math.max(Math.min(tempo + delta * 10, 120), 40);
+  const tempoCounter = document.getElementById('tempo');
+  
+  tempoCounter.innerHTML = `${tempo} bpm`;
+}
+
+function setTempo(tempo_new) {
+  tempo = tempo_new;
+  const tempoCounter = document.getElementById('tempo');  
+  tempoCounter.innerHTML = `${tempo} bpm`;
+}
+
+const start = () =>  {
+  tempo = document.getElementById('bpm_range').value
+  
+  mm.Player.tone.context.resume();  // Required on mobile.
+  
+  
+  stopSignal = false;
+  sampleAndPlayForever();
+};
+
+const stop = () => {
+  stopSignal = true;
+  player.stop();
+  
+
+  document.getElementById('start').style.display = "block";
+};
+
+model.initialize().then(stop);
 
 
 

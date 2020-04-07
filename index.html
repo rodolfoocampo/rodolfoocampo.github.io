@@ -96,12 +96,16 @@ h2 {
 </div>
 </br>
 <div class="container" style='border-style: solid';>
-  </br>
-  <button class="btn btn-primary" onclick="start()">Start music</button> Endless stream of a 100% real-time computer-generated retro-futuristic music. It's all generated here, in your browser, uniquely for you, using a neural network called variational autoencoder.
+  
+  <h2>Algorithmic music</h2>
+  <button class="btn btn-primary" onclick="start()">Start music</button> Endless stream of real-time computer-generated retro-futuristic chiptune music. It's all generated here, in your browser, uniquely for you, using a neural network called variational autoencoder.
 <div class="slidecontainer">
+
   <p id='bpm_label'> <p id='tempo'> Adjust BPMs</p> </p>
   <input type="range" onchange="setTempo(document.getElementById('bpm_range').value)" min="60" max="140" value="100" class="slider" id="bpm_range">
 </div>
+<button class="btn btn-warning" onclick="stop()">Stop music</button>
+</br>
 </br>
 </div>
 </br></br>
@@ -131,9 +135,7 @@ h2 {
 
 <h3>Augmented Reality app to expose the resources used in building a robotic dog</h3>
 <p>As a part of our projects during the 'Taking things apart' fornight, my team and I built a simple app that looked at an image of the dog and overlaid AR elements outlining resources that were wasted. </p>
-<ul>
-  <li> More info <a href="">here</a></li>
-</ul>
+
 </br>
 
 

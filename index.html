@@ -97,7 +97,7 @@ h2 {
 </br>
 <div class="container" style='border-style: solid';>
   
-  <h2>Algorithmic music</h2>
+  <h2>AI radio</h2>
   <button class="btn btn-primary" onclick="start()">Start music</button> Endless stream of real-time computer-generated retro-futuristic chiptune music. It's all generated here, in your browser, uniquely for you, using a neural network called variational autoencoder.
 <div class="slidecontainer">
 
@@ -344,11 +344,11 @@ function setTempo(tempo_new) {
   tempoCounter.innerHTML = `${tempo} bpm`;
 }
 
+// play music!
 const start = () =>  {
   tempo = document.getElementById('bpm_range').value
   
   mm.Player.tone.context.resume();  // Required on mobile.
-  
   
   stopSignal = false;
   sampleAndPlayForever();

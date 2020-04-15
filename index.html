@@ -7,6 +7,9 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://unpkg.com/@webcomponents/webcomponentsjs@^2/webcomponents-bundle.js"></script>
+  <script src="https://unpkg.com/tone"></script>
+  <script src="https://unpkg.com/@tonejs/ui"></script>
   <link rel="icon" href="./Images/yo.jpg">
    <script src="https://cdn.jsdelivr.net/npm/@magenta/music@1.0.0"> </script>
     <link href='https://fonts.googleapis.com/css?family=Codystar' rel='stylesheet'>
@@ -48,7 +51,7 @@ h2 {
 
 <marquee>The chimpanzee and the human share about 99.5 per cent of their evolutionary history, yet most human thinkers regard the chimp as a malformed, irrelevant oddity while seeing themselves as stepping-stones to the Almighty.</marquee>
 
-
+<tone-keyboard octaves="3"></tone-keyboard>
 
 
 <marquee direction="down" width="100%" height="100" behavior="alternate" style="border:solid">
@@ -98,7 +101,7 @@ h2 {
 <div class="container" style='border-style: solid';>
   
   <h2>AI radio</h2>
-  <button class="btn btn-primary" onclick="start()">Start music</button> Endless stream of real-time computer-generated retro-futuristic chiptune music. It's all generated here, in your browser, uniquely for you, using a neural network called variational autoencoder.
+  <button class="btn btn-primary" onclick="start()">Start music</button> Endless stream of real-time computer-generated retro-futuristic chiptune music. It's all generated here, in your browser, uniquely for you, using a neural network called variational autoencoder developed by the team at <a href='https://magenta.tensorflow.org/'>Magenta</a>.
 <div class="slidecontainer">
 
   <p id='bpm_label'> <p id='tempo'> Adjust BPMs</p> </p>
@@ -366,6 +369,21 @@ model.initialize().then(stop);
 
 
 
+
+</script>
+
+<script>
+const synth = new Tone.AMSynth().toMaster()
+
+//attach a listener to the keyboard events
+document.querySelector('tone-keyboard').addEventListener('noteon', e => {
+  synth.triggerAttack(e.detail.name)
+  
+})
+
+document.querySelector('tone-keyboard').addEventListener('noteoff', e => {
+  synth.triggerRelease()
+})
 
 </script>
 

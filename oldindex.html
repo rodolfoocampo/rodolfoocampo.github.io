@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Rodolfo Ocampo</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://unpkg.com/@webcomponents/webcomponentsjs@^2/webcomponents-bundle.js"></script>
+  <link rel="icon" href="./Images/yo.jpg">
+   <script src="https://cdn.jsdelivr.net/npm/@magenta/music@1.0.0"> </script>
+    <link href='https://fonts.googleapis.com/css?family=Codystar' rel='stylesheet'>
+</head>
+
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+  
+  .text
+{
+   
+   color: #000 ;
+   font-family: 'Roboto Mono', monospace ;
+}
+
+button {
+  color: white !important;
+}
+
+h2 {
+  text-decoration: underline;
+}
+
+</style>
+<body>
+
+
+</head>
+<body  onmousemove="myFunction(event, base)">
+
+
+
+<div class = 'text'>
+  
+
+<div class="container" style='border-style: solid';>
+
+
+<marquee>The chimpanzee and the human share about 99.5 per cent of their evolutionary history, yet most human thinkers regard the chimp as a malformed, irrelevant oddity while seeing themselves as stepping-stones to the Almighty.</marquee>
+
+
+
+
+<marquee direction="down" width="100%" height="100" behavior="alternate" style="border:solid">
+  <marquee behavior="alternate">
+  <h3> Hi, I'm Rodolfo </h3>
+    
+    </marquee>
+      
+    
+      
+      
+    </div>
+    
+  </marquee>
+</marquee>
+
+
+</br>
+<div class="container" style='border-style: solid';>
+<h2>Let's do an experiment. </h2> 
+<p id = 'intro'>
+
+  
+
+  If you tap the screen or over move your mouse around, you will see that the color changes accordingly. Try to find your favorite. 
+  </br>
+  </br> 
+  <strong>You will start to notice patterns, </strong> but you will also notice that your options are limited. One of the three components that determine a color was set randomly and remains fixed. The other two can be manipulated with the <strong>X</strong> and <strong>Y</strong> coordinates of your screen tap or cursor. 
+
+  </br>
+  </br>
+  <strong>But wait! </strong> You can roll the dice again to change your fixed variable for a new random number. If you want to find your favorite color, when will you decide to reroll vs. stay with your options? How do you navigate between randomness and agency? 
+
+  </br>
+  </p>
+  </br>
+
+
+<button type="button" onclick="dice()" class="btn btn-primary">Roll the dice</button>
+</br>
+<p>
+</br>
+<strong> Living things face these situations all the time but with many more factors that form complicated feedback loops. </strong> Surviving, making music, designing technology and organizing societies are full of them. I am intersted in understanding these systems in order to tell randomness from agency apart and find the the control dynamics. With this, I hope to make useful contributions to the fields of artistic creation, biology and the development of autonomous systems.</p>
+</p>
+</div>
+</br>
+<div class="container" style='border-style: solid';>
+  
+<<<<<<< HEAD
+  <h2>AI radio</h2>
+  <button class="btn btn-primary" onclick="start()">Start music</button> Endless stream of real-time computer-generated retro-futuristic chiptune music. It's all generated here, in your browser, uniquely for you, using a neural network called variational autoencoder developed by the team at <a href='https://magenta.tensorflow.org/'>Magenta</a>.
+=======
+  <h2>Algorithmic music</h2>
+  <button class="btn btn-primary" onclick="start()">Start music</button> Endless stream of real-time computer-generated retro-futuristic chiptune music. It's all generated here, in your browser, uniquely for you, using a neural network called variational autoencoder.
+>>>>>>> parent of 3755b2f... Nothing
+<div class="slidecontainer">
+
+  <p id='bpm_label'> <p id='tempo'> Adjust BPMs</p> </p>
+  <input type="range" onchange="setTempo(document.getElementById('bpm_range').value)" min="60" max="140" value="100" class="slider" id="bpm_range">
+</div>
+<button class="btn btn-danger" onclick="stop()">Stop music</button>
+</br>
+</br>
+</div>
+</br></br>
+<div class="container" style='border-style: solid';>
+<h2>Hello from down under at the 3A Institute</h2>
+<p>
+  At the moment, I am studying a masters degree at The Autonomy, Agency and Assurance Institute at the Australian National University, where we are building a new branch of engineering inpired by Norbert Wiener's Cybernetics to guide the development of cyber-physical systems towards desirable human and environmental outcomes. 
+</p>
+</br></br>
+
+
+<div class="container" style='border-style: solid';>
+<h2>Current Projects</h2>
+<h3>Algorithmic music composer</h3>
+
+<p>For my first semester's final project I am working on developing a system capable of producing human enjoyable music. I have started playing with randomness and agency in the following Jupyter notebook using the Python language. At this stage, I have only created two different composer algorithms, one semirandom and one that includes some music theory heuristics as well as a drumbeat composer that uses frequency ratios between each percussion, instead of a sequence generator.</p>
+
+ <ul>
+  <li><h4><a href="https://github.com/rodolfoocampo/la_zona/blob/master/Hearing%2C%20feeling%20and%20computing.ipynb">Access the notebook here</a></h4></li>
+</ul>
+</br>
+<h3>COVID-19 scholarly articles analysis</h3>
+<p>I am working on gaining insights from these articles in order to understand COVID-19 better, as a part of challenge launched in Kaggle and as a part of the data and sensors fortnight at the institute.</p>
+</br>
+<h2>Past projects</h2>
+
+
+<h3>Augmented Reality app to expose the resources used in building a robotic dog</h3>
+<p>As a part of our projects during the 'Taking things apart' fornight, my team and I built a simple app that looked at an image of the dog and overlaid AR elements outlining resources that were wasted. </p>
+
+</br>
+
+
+<h3>Human + AI writing collaboration</h3>
+<p>For the portfolio piece required as a part of my application to the 3A Institue, I decided to write an essay in collaboration with the GPT-2 model. </p>
+ <ul>
+  <li><p>The essay can be found <a href="./PDFs/Ocampo_Rodolfo_Portfolio.pdf">here</a> and the code used to create it can be found in <a href="https://colab.research.google.com/drive/1o_zXG71GOsCFnhzG5exskaL-NOIMlluQ">this Colab Notebook</a></p></li>
+</ul>
+</div>
+</br>
+</div>
+</br></br>
+<div class="container" style='border-style: solid';>
+<h2>Games!</h2>
+<h3>The taco game!</h3>
+
+<p>Press the following button and the word "taco" will be randomly inserted somewhere in the text. If you find one, click it to earn a point. It's hard, but don't desist! The victory high is worth it. </p>
+
+<button id = 'taco'type="button" onclick="insertTaco()" class="btn btn-primary">Insert taco</button>
+</br> 
+<p id = 'taco_score'></p>
+
+
+
+<p><strong>Why?</strong></p>
+<p>
+ This game illustrates how our dopamine reward system is closely coupled with to our ability to distinguish signal from noise. Here, my website's text is the noise and the taco is your signal. 
+
+I suspect that such a signal-reward mechanism is closely related to our enjoyment of music and that what I am exploring in my Algorithmic music composer project at the 3Ai. Here's the <a href="https://github.com/rodolfoocampo/la_zona/blob/master/Hearing%2C%20feeling%20and%20computing.ipynb">Jupyter notebook </a> I told you earlier about where I will be doing most of my exploration. </p>
+</br> 
+
+<h3>The chaotic taco game!</h3>
+
+<p>
+ Same game, but now the website text will be random nonsense blob of characters, except for the word 'taco'. Is finding the taco easier? Is it more rewarding? Well, I don't know. This is experimental, OK?</p>
+
+
+<button id='chaos'type="button" onclick="chaos()" class="btn btn-primary">Unleash Taco Chaos</button> <p display='none'>  
+</div>
+
+</br></br>  
+<div class="container" style='border-style: solid';>
+<h2>Blog: Ecofuturismo</h2>
+<p>Here I will be posting some essays and ideas about technology, ecological collapse, algorithmic creativity and many other topics that I cross along my search for the tools to build better future potential states. </p>
+</div>
+</br></br>  
+<div class="container" style='border-style: solid';>
+<h2>Code</h2>
+<p>Check out <a href="https://github.com/rodolfoocampo">my Github!</a> </p>
+</div>
+</br></br>  
+
+</div>
+  <marquee>The universe (which others call the Library) is composed of an indefinite,
+perhaps infinite number of hexagonal galleries. In the center of each gallery
+is a ventilation shaft, bounded by a low r,ailing. From any hexagon one can
+see the floors above and below-one after another, endlessly. The arrangement of the galleries is always the same: Twenty bookshelves, five to each
+side, line four of the hexagon's six sides; the height of the bookshelves, floor
+to ceiling, is hardly greater than the height of a normal librarian. One of the
+hexagon's free sides opens onto a narrow sort of vestibule, which in turn
+opens onto another gallery, identical to the first-identical in fact to all.
+To the left and right of the vestibule are two tiny compartments. One is
+for sleeping, upright; the other, for satisfying one's physical necessities.
+Through this space, too, there passes a spiral staircase, which winds upward
+and downward into the remotest distance. In the vestibule there is a mirror,
+which faithfully duplicates appearances. Men often infer from this mirror
+that the Library is not infinite-if it were, what need would there be for that
+illusory replication? I prefer to dream that burnished surfaces are a figuration and promise of the infinite ... . Light is provided by certain spherical
+fruits that bear the name "bulbs." There are two of these bulbs in each hexagon, set crosswise. The light they give is insufficient, and unceasing. </marquee>
+
+</div>
+    
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+
+taco_game_points = 0;
+
+$("body").css("background-color", 'rgb(' + 200 + ',' + 100 + ',' + 240 + ')');
+
+
+document_width =  $(document).width();
+
+function getRandomInt(n) {
+  return Math.floor(Math.random() * n);
+}
+function chaos() {
+  var s = $('#intro').text()
+  var arr = s.split('');           // Convert String to array
+  var n = arr.length;              // Length of the array
+  
+  for(var i=0 ; i<n-1 ; ++i) {
+    var j = getRandomInt(n);       // Get random of [0, n-1]
+    
+    var temp = arr[i];             // Swap arr[i] and arr[j]
+    arr[i] = arr[j];
+    arr[j] = temp;
+  }
+  
+  s = arr.join('');  
+  $('p').text(s);
+  insertTaco();
+
+
+             // Convert Array to string
+  return s;                        // Return shuffled string
+}
+
+base = Math.floor((Math.random() *100) + 150);
+function dice() {
+  base = Math.floor((Math.random() *100) + 150);
+  $("body").css("background-color", 'rgb(' + scaledX + ',' + scaledY + ',' + base + ')')
+  return base;
+}
+
+
+
+function myFunction(e, base) {
+  var x = e.clientX;
+  var y = e.clientY;
+  scaledX = Math.floor((x/document_width)*100) + 150
+  scaledY = Math.floor((y/document_width)*100) + 150
+  combined = scaledX + scaledY%80
+  
+
+  var rgbvalue = 'rgb(' + scaledX + ',' + scaledY + ',' + base + ')';
+  $("body").css("background-color", rgbvalue);
+  text = scaledX + ',' + scaledY;
+  height = $(document).width();
+  
+}
+
+var selected_p_index;
+var original_text = '';
+function insertTaco() {
+  var i;
+  selected_p_tag = document.querySelectorAll("p");
+  selected_p_index = getRandomInt(selected_p_tag.length);
+  i = getRandomInt(selected_p_index);
+  
+  var past_string = selected_p_tag[i].innerHTML;
+  var selected_position = getRandomInt(past_string.length)
+  new_string = past_string.insert(selected_position, "<a style='color: black;' onclick='add_points()'>taco</a> ");
+  console.log(selected_position)
+
+  selected_p_tag[i].innerHTML = new_string;
+
+  $('#taco').text('Insert another taco')
+
+  
+}
+
+var seen = []
+function add_points(){
+  
+  if (seen.includes(selected_p_index) == false){
+    taco_game_points = taco_game_points + 1;
+    $('#taco_score').text('New tacos found: ' + taco_game_points);
+    console.log(taco_game_points)
+    seen.push(selected_p_index);
+  }
+  
+}
+
+
+
+String.prototype.insert = function(index, string) {
+  if (index > 0)
+  {
+    return this.substring(0, index) + string + this.substring(index, this.length);
+  }
+
+  return string + this;
+};
+
+//Example of use:
+// Instantiate the model by specifying the desired checkpoint.
+const model = new mm.MusicVAE(
+  'https://storage.googleapis.com/magentadata/js/checkpoints/music_vae/trio_4bar');
+
+const player = new mm.Player();
+
+let stopSignal = false;
+let count = 0;
+let tempo = 80;
+
+const sampleAndPlayForever = () => {
+  player.stop();
+  count += 1;
+  
+  return model.sample(1)
+    .then((samples) => player.start(samples[0], tempo))
+    .then(stopSignal ? undefined : sampleAndPlayForever)
+};
+
+const changeTempo = (delta) => {
+  tempo = Math.max(Math.min(tempo + delta * 10, 120), 40);
+  const tempoCounter = document.getElementById('tempo');
+  
+  tempoCounter.innerHTML = `${tempo} bpm`;
+}
+
+function setTempo(tempo_new) {
+  tempo = tempo_new;
+  const tempoCounter = document.getElementById('tempo');  
+  tempoCounter.innerHTML = `${tempo} bpm`;
+}
+
+const start = () =>  {
+  tempo = document.getElementById('bpm_range').value
+  
+  mm.Player.tone.context.resume();  // Required on mobile.
+  
+  
+  stopSignal = false;
+  sampleAndPlayForever();
+};
+
+const stop = () => {
+  stopSignal = true;
+  player.stop();
+  
+
+  document.getElementById('start').style.display = "block";
+};
+
+model.initialize().then(stop);
+
+
+
+
+</script>
+
+
+<script>
+/*
+const synth = new Tone.AMSynth().toMaster()
+//attach a listener to the keyboard events
+document.querySelector('tone-keyboard').addEventListener('noteon', e => {
+  synth.triggerAttack(e.detail.name)
+  
+})
+document.querySelector('tone-keyboard').addEventListener('noteoff', e => {
+  synth.triggerRelease()
+})
+*/
+</script>
+
+</body>
+</html>

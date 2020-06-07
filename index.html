@@ -70,7 +70,7 @@ h2 {
 </br>
 <div class="container" style='border-style: solid';>
 <h3>About Me</h3>
-<p>Hi! I'm Rodolfo. I am interested in the intersection between technology, ecology and art. "I am" also part of the small continuum of life on Earth who was sneakily tricked by evolution into a false illusion of individuality.</p>
+<p>Hi! I'm Rodolfo. I am a primate interested in the intersection between technology, ecology and art. </p>
 
 <h3>Where am I?</h3>
 <p>
@@ -93,126 +93,6 @@ Here I showcase some of my work from my courses. Take a look!
   </br>
 </br></br>
 
-
-
-<div class="container" style='border-style: solid';>
-<h2>My work</h2>
-<h3>Algorithmic music composer</h3>
-
-<p>For my first semester's final project I am working on developing a system capable of producing human enjoyable music. I have started playing with randomness and agency in the following Jupyter notebook using the Python language. At this stage, I have only created two different composer algorithms, one semirandom and one that includes some music theory heuristics as well as a drumbeat composer that uses frequency ratios between each percussion, instead of a sequence generator.</p>
-
- <ul>
-  <li><h4><a href="https://github.com/rodolfoocampo/la_zona/blob/master/Hearing%2C%20feeling%20and%20computing.ipynb">Access the notebook here</a></h4></li>
-</ul>
-</br>
-<h3>COVID-19 scholarly articles analysis</h3>
-<p>I am working on gaining insights from these articles in order to understand COVID-19 better, as a part of challenge launched in Kaggle and as a part of the data and sensors fortnight at the institute.</p>
-</br>
-<h2>Past projects</h2>
-
-
-<h3>Augmented Reality app to expose the resources used in building a robotic dog</h3>
-<p>As a part of our projects during the 'Taking things apart' fornight, my team and I built a simple app that looked at an image of the dog and overlaid AR elements outlining resources that were wasted. </p>
-
-</br>
-
-
-<h3>Human + AI writing collaboration</h3>
-<p>For the portfolio piece required as a part of my application to the 3A Institue, I decided to write an essay in collaboration with the GPT-2 model. </p>
- <ul>
-  <li><p>The essay can be found <a href="./PDFs/Ocampo_Rodolfo_Portfolio.pdf">here</a> and the code used to create it can be found in <a href="https://colab.research.google.com/drive/1o_zXG71GOsCFnhzG5exskaL-NOIMlluQ">this Colab Notebook</a></p></li>
-</ul>
-</div>
-</br>
-</div>
-<div class="container" style='border-style: solid';>
-<h2>Let's do an experiment. </h2> 
-<p id = 'intro'>
-
-  
-
-  If you tap the screen or over move your mouse around, you will see that the color changes accordingly. Try to find your favorite. 
-  </br>
-  </br> 
-  <strong>You will start to notice patterns, </strong> but you will also notice that your options are limited. One of the three components that determine a color was set randomly and remains fixed. The other two can be manipulated with the <strong>X</strong> and <strong>Y</strong> coordinates of your screen tap or cursor. 
-
-  </br>
-  </br>
-  <strong>But wait! </strong> You can roll the dice again to change your fixed variable for a new random number. If you want to find your favorite color, when will you decide to reroll vs. stay with your options? How do you navigate between randomness and agency? 
-
-  </br>
-  </p>
-  </br>
-
-
-<button type="button" onclick="dice()" class="btn btn-primary">Roll the dice</button>
-</br>
-<p>
-</br>
-<strong> Living things face these situations all the time but with many more factors that form complicated feedback loops. </strong> Surviving, making music, designing technology and organizing societies are full of them. I am intersted in understanding these systems in order to tell randomness from agency apart and find the the control dynamics. With this, I hope to make useful contributions to the fields of artistic creation, biology and the development of autonomous systems.</p>
-</p>
-</div>
-</br>
-<div class="container" style='border-style: solid';>
-  
-<<<<<<< HEAD
-  <h2>AI radio</h2>
-  <button class="btn btn-primary" onclick="start()">Start music</button> Endless stream of real-time computer-generated retro-futuristic chiptune music. It's all generated here, in your browser, uniquely for you, using a neural network called variational autoencoder developed by the team at <a href='https://magenta.tensorflow.org/'>Magenta</a>.
-=======
-  <h2>Algorithmic music</h2>
-  <button class="btn btn-primary" onclick="start()">Start music</button> Endless stream of real-time computer-generated retro-futuristic chiptune music. It's all generated here, in your browser, uniquely for you, using a neural network called variational autoencoder.
->>>>>>> parent of 3755b2f... Nothing
-<div class="slidecontainer">
-
-  <p id='bpm_label'> <p id='tempo'> Adjust BPMs</p> </p>
-  <input type="range" onchange="setTempo(document.getElementById('bpm_range').value)" min="60" max="140" value="100" class="slider" id="bpm_range">
-</div>
-<button class="btn btn-danger" onclick="stop()">Stop music</button>
-</br>
-</br>
-</div>
-</br></br>
-
-</br></br>
-<div class="container" style='border-style: solid';>
-<h2>Games!</h2>
-<h3>The taco game!</h3>
-
-<p>Press the following button and the word "taco" will be randomly inserted somewhere in the text. If you find one, click it to earn a point. It's hard, but don't desist! The victory high is worth it. </p>
-
-<button id = 'taco'type="button" onclick="insertTaco()" class="btn btn-primary">Insert taco</button>
-</br> 
-<p id = 'taco_score'></p>
-
-
-
-<p><strong>Why?</strong></p>
-<p>
- This game illustrates how our dopamine reward system is closely coupled with to our ability to distinguish signal from noise. Here, my website's text is the noise and the taco is your signal. 
-
-I suspect that such a signal-reward mechanism is closely related to our enjoyment of music and that what I am exploring in my Algorithmic music composer project at the 3Ai. Here's the <a href="https://github.com/rodolfoocampo/la_zona/blob/master/Hearing%2C%20feeling%20and%20computing.ipynb">Jupyter notebook </a> I told you earlier about where I will be doing most of my exploration. </p>
-</br> 
-
-<h3>The chaotic taco game!</h3>
-
-<p>
- Same game, but now the website text will be random nonsense blob of characters, except for the word 'taco'. Is finding the taco easier? Is it more rewarding? Well, I don't know. This is experimental, OK?</p>
-
-
-<button id='chaos'type="button" onclick="chaos()" class="btn btn-primary">Unleash Taco Chaos</button> <p display='none'>  
-</div>
-
-</br></br>  
-<div class="container" style='border-style: solid';>
-<h2>Blog: Ecofuturismo</h2>
-<p>Here I will be posting some essays and ideas about technology, ecological collapse, algorithmic creativity and many other topics that I cross along my search for the tools to build better future potential states. </p>
-</div>
-</br></br>  
-<div class="container" style='border-style: solid';>
-<h2>Code</h2>
-<p>Check out <a href="https://github.com/rodolfoocampo">my Github!</a> </p>
-</div>
-</br></br>  
 
 </div>
   <marquee>The universe (which others call the Library) is composed of an indefinite,
